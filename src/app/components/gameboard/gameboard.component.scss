@@ -2,7 +2,104 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-repeat: no-repeat;
-  background-image: url('/assets/images/Castle.png');
-  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      position: relative;
+      width: 120%;
+      height: auto;
+    }
+  }
+  .game-board {
+    position: relative;
+    height: 600px;
+    width: 700px;
+    background-color: rgba(180, 180, 180, 0.2);
+    .board-space {
+      position: relative;
+      float: left;
+      margin: 5px;
+      width: calc(11.1111111111% - 10px);
+      height: calc(11.1111111111% - 10px);
+      background-color: #0069d9;
+      box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0 6px 0 0 #E5C100;
+      border: 2px solid #E5C100;
+      transition: all 0.3s ease;
+      .player {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .board-space:nth-child(10),
+    .board-space:nth-child(11),
+    .board-space:nth-child(13),
+    .board-space:nth-child(14),
+    .board-space:nth-child(16),
+    .board-space:nth-child(17),
+    .board-space:nth-child(28),
+    .board-space:nth-child(29),
+    .board-space:nth-child(31),
+    .board-space:nth-child(32),
+    .board-space:nth-child(34),
+    .board-space:nth-child(35) {
+      margin-right: calc(33.3333333333% + 5px);
+    }
+    .board-space:nth-child(11),
+    .board-space:nth-child(14),
+    .board-space:nth-child(17),
+    .board-space:nth-child(29),
+    .board-space:nth-child(32),
+    .board-space:nth-child(35),
+    .board-space:nth-child(41) {
+      background-color: #FFD700;
+      border: none;
+    }
+    .board-space:nth-child(20),
+    .board-space:nth-child(21),
+    .board-space:nth-child(22),
+    .board-space:nth-child(24),
+    .board-space:nth-child(25),
+    .board-space:nth-child(26),
+    .board-space:nth-child(27) {
+      background-color: #333333;
+      box-shadow: 0 6px 0 0 #000000;
+      border: none;
+    }
+    .board-space:nth-child(23) {
+      background-color: #333333;
+    }
+    .board-space.on {
+      box-shadow: 0 3px 0 0 #E5C100;
+      transform: translateY(3px);
+    }
+    .board-space:nth-child(20).on,
+    .board-space:nth-child(21).on,
+    .board-space:nth-child(22).on,
+    .board-space:nth-child(24).on,
+    .board-space:nth-child(25).on,
+    .board-space:nth-child(26).on,
+    .board-space:nth-child(27).on {
+      box-shadow: 0 3px 0 0 #000000;
+    }
+    .board-space:last-child {
+      background-color: #004A99;
+    }
+  }
 }

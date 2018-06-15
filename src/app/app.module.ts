@@ -8,7 +8,7 @@ import { PlayComponent } from './components/play/play.component';
 import { GameComponent } from './components/game/game.component';
 import { GameboardComponent } from './components/gameboard/gameboard.component';
 import { GameDisplayComponent } from './components/game-display/game-display.component';
-
+import { GameService } from './game/services/game.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,9 @@ import { GameDisplayComponent } from './components/game-display/game-display.com
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GameService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

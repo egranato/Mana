@@ -1,7 +1,9 @@
 <div class="game-shell">
+  <div class="background">
+    <!-- change depending on board type also fix for mobile styling -->
+    <img src="/assets/images/Castle.png" alt="Castle Image">
+  </div>
   <div class="game-board">
-    <div class="board-space">
-
-    </div>
+    <div class="board-space" *ngFor="let space of spaces;let i = index;"></div>
   </div>
 </div>
