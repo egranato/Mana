@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import * as io from 'socket.io-client';
 
 @Injectable()
 export class GameService {
   // public players: Array<Player>;
+  private socket: any;
   constructor() {
     // this.players = [];
+    this.socket = io('https://diceliar.herokuapp.com/');
   }
   public roll(): number {
     return this.getRoll();
