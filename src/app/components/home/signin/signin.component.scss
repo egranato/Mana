@@ -1,0 +1,101 @@
+.fill {
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFF0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form-box {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FEFEFE;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.05);
+    min-height: 457px;
+    h2 {
+      font-size: 30px;
+      position: relative;
+    }
+    .input-box {
+      width: 90%;
+      height: 50px;
+      position: relative;
+      img {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        height: 40px;
+        width: auto;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    .input-box {
+      .group {
+        input:focus~img {
+          display: inline;
+          opacity: 1;
+        }
+      }
+    }
+    .input-box.button-holster {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 65px;
+      button {
+        position: relative;
+        border-radius: 8px;
+        height: 65px;
+        width: 125px;
+        font-size: 18px;
+        box-shadow: 0 3px 0 0 #0B4C56;
+        background-color: #17a2b8;
+        border: none;
+        color: #FEFEFE;
+        transition: all 0.3s ease;
+      }
+      button:hover, button:focus:not([active]) {
+        box-shadow: 0 6px 0 0 #0B4C56;
+        transform: translateY(-3px);
+        outline: none;
+      }
+      button:active, button:active:hover, button[active] {
+        box-shadow: 0 0 0 0 #0B4C56;
+        transform: translateY(3px);
+      }
+    }
+  }
+  .form-box.short {
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .fill {
+    .form-box {
+      height: 65%;
+      width: 65%;
+    }
+    .form-box.short {
+      height: 45%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .fill {
+    .form-box {
+      height: 55%;
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+}

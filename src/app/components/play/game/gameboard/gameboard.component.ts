@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from '../../game/services/game.service';
-import { BoardSpace } from '../../game/models/board-space';
+import { GameService } from '../../../../game/services/game.service';
+import { BoardSpace } from '../../../../models/models';
 
 @Component({
   selector: 'app-gameboard',
