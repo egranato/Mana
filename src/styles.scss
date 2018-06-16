@@ -112,7 +112,8 @@ input[type=number] {
     }
     input.ng-not-empty~label,
     input.ng-not-empty~label,
-    input:focus~label {
+    input:focus~label,
+    label.raise {
       font-size: 15px;
       color: #858585;
     }
@@ -305,7 +306,8 @@ input[type=number] {
   }
   input.ng-not-empty~label,
   input.ng-not-empty~label,
-  input:focus~label {
+  input:focus~label,
+  label.raise {
     top: -2px;
     font-size: 10px;
     color: #95989A;
